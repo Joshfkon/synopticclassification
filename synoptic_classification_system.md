@@ -394,6 +394,63 @@ Material migrates INTO this block from:
 
 ## Edge Cases & Decision Rules
 
+### Classification Decision Tree for Edge Cases
+
+When a book is ambiguous, work through these questions:
+
+**Step 1: Is it THEORY or CASE STUDY?**
+- Does the book provide a LENS for interpreting other books? → Theory (900-908)
+- Is it a case study you'd interpret USING theory? → Regional (910-999) or Dewey
+
+**Step 2: If THEORY, what kind?**
+- About historical cycles, rise/fall patterns → 901.1 (Cliodynamics)
+- About why civilizations collapse → 901.2 (Collapse & decline)
+- About how institutions shape outcomes → 901.3 (Institutional analysis)
+- About economics & state power, resources → 901.4 (Political economy)
+- About population as historical driver → 901.5 (Demographic models)
+- About class, status, mobility, stratification → 901.6 (Social stratification)
+- About war, strategy, military thought → 903 (War theory)
+- About geopolitics, international order → 904 (Geopolitics)
+- About state formation, regime types → 906 (State formation)
+- About empire, hegemony → 907 (Empire)
+
+**Step 3: If REGIONAL, does it have a thematic lens?**
+- Just narrative ("what happened") → No suffix (e.g., 973.926)
+- Economic analysis/policy → E suffix (e.g., 973.926E)
+- Social policy/commentary → S suffix (e.g., 973.926S)
+- Foreign policy/security → F suffix (e.g., 973.926F)
+- Political commentary → P suffix (e.g., 973.926P)
+- Trade policy → T suffix (e.g., 973.926T)
+- Cultural/intellectual → C suffix (e.g., 973.926C)
+
+**Step 4: Does it SPAN multiple eras?**
+- Yes + no thematic lens → V suffix (e.g., 973V)
+- Yes + thematic lens → Compound suffix (e.g., 973VS, 973VE)
+
+**Step 5: Is it actually SOCIOLOGY or PSYCHOLOGY, not history?**
+- Pure sociological theory (Veblen, Weber) → Keep in 300s (e.g., 305.5)
+- Evolutionary psychology (mating, kinship, cognition) → 576.8x
+- NOT evo psych just because it discusses group differences—Sowell comparing ethnic group outcomes is institutional analysis (901.3), not biodiversity (576.82)
+
+### Key Distinctions
+
+**Sowell's books:**
+- *Conflict of Visions* → 906 (theory of political order)
+- *Economics and Politics of Race* → 901.3 (institutional analysis, comparative)
+- *Knowledge and Decisions* → 901.3 (institutional analysis)
+- *Vision of the Anointed* → 973.926S (Reagan era social commentary)
+- *Controversial Essays* → 973VS (spanning social commentary)
+- *Black Rednecks and White Liberals* → 973.926S (Reagan era social commentary)
+
+**Clark's books:**
+- *Farewell to Alms* → 901.5 (demographic/economic model of history)
+- *Son Also Rises* → 901.6 (social stratification theory)
+
+**NOT 576.8x (evolutionary psychology) unless:**
+- The book explicitly uses evolutionary biology to explain behavior
+- Examples: Wright's *Moral Animal*, Ridley's *Origins of Virtue*, Fisher's *Why We Love*
+- Comparing group outcomes across societies is NOT evo psych—it's institutional analysis (901.3) or stratification theory (901.6)
+
 ### Spanning Works
 Books covering a region across all eras (e.g., a full history of Russia) use the .01–.09 subdivision for that region, or simply the base number without chronological subdivision.
 
