@@ -6,7 +6,19 @@
       "use": "@vercel/node"
     },
     {
-      "src": "index.html",
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.svg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.ico",
       "use": "@vercel/static"
     }
   ],
@@ -14,6 +26,26 @@
     {
       "src": "/api/classify",
       "dest": "/api/classify.js"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.svg",
+      "dest": "/favicon.svg"
+    },
+    {
+      "src": "/favicon-32.png",
+      "dest": "/favicon-32.png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "dest": "/apple-touch-icon.png"
+    },
+    {
+      "src": "/og-image.png",
+      "dest": "/og-image.png"
     },
     {
       "src": "/((?!api/).*)",
