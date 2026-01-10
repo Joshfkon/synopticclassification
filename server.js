@@ -64,7 +64,7 @@ This means:
 | 904 | Geopolitics & International Systems | Theories of international order, geopolitical frameworks, systemic analysis of state competition | Mackinder, Mahan, Mearsheimer, Zeihan, Brzezinski, Kaplan, Waltz |
 | 905 | *Reserved* | Available for future use | |
 | 906 | State Formation & Institutions | How states form, regime theory, institutional development, political order | Hobbes, Locke, Fukuyama's *Origins of Political Order*, Huntington's *Political Order*, Tilly |
-| 907 | Empire & Hegemony | Theories of imperial expansion, hegemonic competition, ideologies as historical forces | Schumpeter, Ferguson, Sowell's *Conquests and Cultures*, Doyle, Darwin's *After Tamerlane* |
+| 907 | Empire & Hegemony | Theories of imperial expansion, hegemonic competition, ideologies as historical forces | Schumpeter, Ferguson, Doyle, Darwin's *After Tamerlane* |
 | 908 | Comparative & Bilateral Systems | Works comparing multiple civilizations/states, or focused on relationships between powers (not reducible to one region) | Gaddis's *The Cold War*, Westad's *The Global Cold War*, Nye |
 
 ---
@@ -189,9 +189,9 @@ Examples:
 | 973.924 | Nixon era, narrative | Perlstein's *Nixonland*, Haldeman's *Diaries* |
 | 973.924E | Nixon era, economic policy | Garten's *Three Days at Camp David* |
 | 973.926 | Reagan era, narrative | Perlstein's *Reaganland* |
-| 973.926S | Reagan era, social policy | Sowell's *Civil Rights: Rhetoric or Reality* |
+| 973.926S | Reagan era, social policy | Edsall's *Chain Reaction* |
 | 973.926C | Reagan era, cultural | Doherty's *Radicals for Capitalism* |
-| 973.927S | Bush I era, social policy | Sowell's *Compassion Versus Guilt* |
+| 973.927S | Bush I era, social policy | Patterson's *Freedom Is Not Enough* |
 | 973.928T | Clinton era, trade policy | Bovard's *Fair Trade Fraud* |
 | 973.932E | Obama era, economic policy | Sorkin's *Too Big to Fail*, Timiraos's *Trillion Dollar Triage* |
 | 973.933T | Trump era, trade policy | Lighthizer's *No Trade Is Free* |
@@ -325,7 +325,7 @@ Evolutionary approaches to human behavior belong with biology (576, evolution), 
 |--------|----------|-------------|----------------------|
 | 576.80 | Human evolution, general | Physical and behavioral evolution of humans | |
 | 576.81 | Intelligence & psychometrics | IQ, cognitive ability, g-factor, measurement of intelligence | |
-| 576.82 | Human biodiversity | Population differences, heritability of traits | Murray's *Human Diversity*, Clark's *Son Also Rises* |
+| 576.82 | Human biodiversity | Population differences, heritability of traits | Plomin's *Blueprint*, Pinker's *The Blank Slate* |
 | 576.83 | Evolutionary psychology, general | Evolution of mind, behavior, decision-making | Wright's *Moral Animal* |
 | 576.84 | Sociality, cooperation, kinship | Evolution of social behavior, altruism, kin selection | Ridley's *Origins of Virtue*, Chapais's *Primeval Kinship* |
 | 576.85 | Sex, mating, pair-bonding | Evolution of human sexuality and reproduction | Fisher's *Why We Love*, Diamond's *Why Is Sex Fun?* |
@@ -442,7 +442,7 @@ Examples:
 - 973.923 CAR → Caro, *Master of the Senate* (narrative)
 - 973.924 PER → Perlstein, *Nixonland* (narrative)
 - 973.924E GAR → Garten, *Three Days at Camp David* (economic)
-- 973.926S SOW → Sowell, *Civil Rights: Rhetoric or Reality* (social policy)
+- 973.926S EDS → Edsall, *Chain Reaction* (social policy)
 - 973.928T BOV → Bovard, *Fair Trade Fraud* (trade policy)
 - 973.932E SOR → Sorkin, *Too Big to Fail* (economic)
 - 973.933T LIG → Lighthizer, *No Trade Is Free* (trade policy)
