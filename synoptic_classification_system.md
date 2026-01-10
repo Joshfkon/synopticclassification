@@ -120,6 +120,23 @@ This ensures that textbooks and contemporary commentary don't interrupt the narr
 | F | Foreign policy & national security |
 | C | Cultural & intellectual history |
 
+### Compound Suffixes
+
+When a book is both a spanning work AND has a thematic focus, use compound suffixes with V first:
+
+| Suffix | Content | Example |
+|--------|---------|---------|
+| VS | Spanning + social commentary | Sowell's essay collections |
+| VE | Spanning + economic analysis | Gordon's *Rise and Fall of American Growth* |
+| VF | Spanning + foreign policy | |
+| VP | Spanning + political commentary | |
+
+The V indicates "this spans multiple eras" while the second letter indicates the thematic lens. Plain V without a second letter is for neutral spanning surveys with no dominant thematic lens.
+
+Examples:
+- 973VE = Gordon's *Rise and Fall of American Growth* (spanning economic analysis)
+- 973VS = Sowell's *Controversial Essays* (spanning social commentary)
+
 ### How It Works
 
 **No suffix** = narrative history (what happened)
@@ -130,7 +147,8 @@ Examples:
 - 973.924P → Political commentary about Nixon era
 - 973.924S → Social policy debates during Nixon era
 - 973R → Reference/textbook on US government (timeless)
-- 973V → Survey/spanning history of the US
+- 973V → Survey/spanning history of the US (neutral lens)
+- 973VE → Spanning economic analysis of the US (compound suffix)
 
 ### United States (973) Application
 
@@ -139,7 +157,8 @@ Examples:
 | Number | Content | Examples |
 |--------|---------|----------|
 | 973R | Reference, textbooks, institutional analysis | O'Connor/Sabato's *American Government*, Bryce's *American Commonwealth*, Morley's *Freedom and Federalism* |
-| 973V | Surveys, spanning works | Gordon's *Rise and Fall of American Growth*, Cowan's *Social History of American Technology* |
+| 973V | Surveys, spanning works (neutral) | Cowan's *Social History of American Technology* |
+| 973VE | Spanning + economic analysis | Gordon's *Rise and Fall of American Growth* |
 | 973H | Historiography | |
 
 **Standard Dewey 973.x chronological subdivisions (unchanged):**
@@ -424,7 +443,7 @@ Examples:
 - 952.05E TAB → Tabb, *The Postwar Japanese System* (economic)
 - 973R OCO → O'Connor/Sabato, *American Government* (reference)
 - 973R BRY → Bryce, *American Commonwealth* (reference)
-- 973V GOR → Gordon, *Rise and Fall of American Growth* (survey)
+- 973VE GOR → Gordon, *Rise and Fall of American Growth* (spanning economic)
 - 973.5 TOC → Tocqueville, *Democracy in America* (narrative)
 - 973.923 CAR → Caro, *Master of the Senate* (narrative)
 - 973.924 PER → Perlstein, *Nixonland* (narrative)

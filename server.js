@@ -134,6 +134,23 @@ This ensures that textbooks and contemporary commentary don't interrupt the narr
 | F | Foreign policy & national security |
 | C | Cultural & intellectual history |
 
+### Compound Suffixes
+
+When a book is both a spanning work AND has a thematic focus, use compound suffixes with V first:
+
+| Suffix | Content | Example |
+|--------|---------|---------|
+| VS | Spanning + social commentary | Sowell's essay collections |
+| VE | Spanning + economic analysis | Gordon's *Rise and Fall of American Growth* |
+| VF | Spanning + foreign policy | |
+| VP | Spanning + political commentary | |
+
+The V indicates "this spans multiple eras" while the second letter indicates the thematic lens. Plain V without a second letter is for neutral spanning surveys with no dominant thematic lens.
+
+Examples:
+- 973VE = Gordon's *Rise and Fall of American Growth* (spanning economic analysis)
+- 973VS = Sowell's *Controversial Essays* (spanning social commentary)
+
 ### How It Works
 
 **No suffix** = narrative history (what happened)
@@ -153,7 +170,8 @@ Examples:
 | Number | Content | Examples |
 |--------|---------|----------|
 | 973R | Reference, textbooks, institutional analysis | O'Connor/Sabato's *American Government*, Bryce's *American Commonwealth*, Morley's *Freedom and Federalism* |
-| 973V | Surveys, spanning works | Gordon's *Rise and Fall of American Growth*, Cowan's *Social History of American Technology* |
+| 973V | Surveys, spanning works (neutral) | Cowan's *Social History of American Technology* |
+| 973VE | Spanning + economic analysis | Gordon's *Rise and Fall of American Growth* |
 | 973H | Historiography | |
 
 **Standard Dewey 973.x chronological subdivisions (unchanged):**
@@ -438,7 +456,7 @@ Examples:
 - 952.05E TAB → Tabb, *The Postwar Japanese System* (economic)
 - 973R OCO → O'Connor/Sabato, *American Government* (reference)
 - 973R BRY → Bryce, *American Commonwealth* (reference)
-- 973V GOR → Gordon, *Rise and Fall of American Growth* (survey)
+- 973VE GOR → Gordon, *Rise and Fall of American Growth* (spanning economic)
 - 973.5 TOC → Tocqueville, *Democracy in America* (narrative)
 - 973.923 CAR → Caro, *Master of the Senate* (narrative)
 - 973.924 PER → Perlstein, *Nixonland* (narrative)
@@ -479,7 +497,15 @@ When given a book title, author, and optional description, you must:
    - Trade & industrial policy → T suffix
    - Cultural & intellectual history → C suffix
    - Reference/textbook → R suffix
-   - Survey/spanning work → V suffix
+   - Survey/spanning work (neutral) → V suffix
+   - Spanning work WITH thematic focus → compound suffix (VE, VS, VF, VP)
+
+   **Compound Suffixes**: When a book BOTH spans multiple eras AND has a thematic lens, use V + second letter:
+   - VE = spanning + economic (e.g., Gordon's *Rise and Fall of American Growth* → 973VE)
+   - VS = spanning + social (e.g., Sowell's essay collections → 973VS)
+   - VF = spanning + foreign policy
+   - VP = spanning + political
+   Plain V is ONLY for neutral spanning surveys with no dominant analytical lens.
 
    **ONLY omit suffix for:** Pure narrative history that tells "what happened" chronologically without a dominant analytical lens. Examples: Kershaw's *Hitler* biographies, Evans's *Third Reich* trilogy, Caro's *LBJ* books, Perlstein's *Nixonland*.
 
@@ -491,7 +517,7 @@ When given a book title, author, and optional description, you must:
 
 Always respond with valid JSON in this exact format:
 {
-    "classification": "the SCS number (e.g., 901.2, 973.926S, 947.085F)",
+    "classification": "the SCS number (e.g., 901.2, 973.926S, 947.085F, 973VE)",
     "explanation": "2-3 sentences explaining why this classification fits",
     "neighbors": "2-3 example books that would sit next to this on the shelf"
 }`;
