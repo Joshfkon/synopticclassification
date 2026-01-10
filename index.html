@@ -968,6 +968,8 @@
             resultArea.classList.remove('visible');
 
             try {
+                console.log('[DEBUG] Sending classification request for:', { title, author, description });
+
                 const response = await fetch('/api/classify', {
                     method: 'POST',
                     headers: {
@@ -976,15 +978,25 @@
                     body: JSON.stringify({ title, author, description })
                 });
 
+                console.log('[DEBUG] Response status:', response.status, response.statusText);
+                console.log('[DEBUG] Response headers:', Object.fromEntries(response.headers.entries()));
+
                 // Check if response is JSON before parsing
                 const contentType = response.headers.get('content-type');
+                console.log('[DEBUG] Content-Type header:', contentType);
+
                 if (!contentType || !contentType.includes('application/json')) {
+                    // Try to get the raw response text for debugging
+                    const rawText = await response.text();
+                    console.error('[DEBUG] Non-JSON response body:', rawText.substring(0, 500));
                     throw new Error('Server returned an invalid response. Please try again.');
                 }
 
                 const data = await response.json();
+                console.log('[DEBUG] Parsed response data:', data);
 
                 if (!response.ok || data.error) {
+                    console.error('[DEBUG] Response error:', data.error);
                     throw new Error(data.error || 'Classification failed');
                 }
 

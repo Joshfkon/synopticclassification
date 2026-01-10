@@ -483,6 +483,9 @@ const anthropic = new Anthropic({
 });
 
 module.exports = async function handler(req, res) {
+    console.log('[DEBUG] Received request:', req.method, req.url);
+    console.log('[DEBUG] Request headers:', JSON.stringify(req.headers, null, 2));
+
     // Set CORS headers for all responses
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -490,19 +493,24 @@ module.exports = async function handler(req, res) {
 
     // Handle CORS preflight
     if (req.method === 'OPTIONS') {
+        console.log('[DEBUG] Handling OPTIONS preflight request');
         res.status(200).end();
         return;
     }
 
     // Only allow POST
     if (req.method !== 'POST') {
+        console.log('[DEBUG] Method not allowed:', req.method);
         res.status(405).json({ error: 'Method not allowed' });
         return;
     }
 
+    console.log('[DEBUG] Request body:', JSON.stringify(req.body, null, 2));
+
     const { title, author, description } = req.body;
 
     if (!title) {
+        console.log('[DEBUG] Missing title in request');
         res.status(400).json({ error: 'Book title is required' });
         return;
     }
@@ -515,6 +523,9 @@ ${description ? `**Description/Summary:** ${description}` : ''}
 
 Respond with the JSON classification.`;
 
+    console.log('[DEBUG] Sending request to Claude API...');
+    console.log('[DEBUG] User prompt:', userPrompt);
+
     try {
         const message = await anthropic.messages.create({
             model: 'claude-sonnet-4-20250514',
@@ -525,19 +536,31 @@ Respond with the JSON classification.`;
             ]
         });
 
+        console.log('[DEBUG] Claude API response received');
+        console.log('[DEBUG] Stop reason:', message.stop_reason);
+        console.log('[DEBUG] Usage:', JSON.stringify(message.usage));
+
         const responseText = message.content[0].text;
+        console.log('[DEBUG] Raw response text:', responseText);
 
         // Parse JSON from response
         const jsonMatch = responseText.match(/\{[\s\S]*\}/);
         if (!jsonMatch) {
+            console.error('[DEBUG] Failed to extract JSON from response');
             throw new Error('Could not parse classification response');
         }
 
+        console.log('[DEBUG] Extracted JSON string:', jsonMatch[0]);
+
         const result = JSON.parse(jsonMatch[0]);
+        console.log('[DEBUG] Parsed result:', JSON.stringify(result, null, 2));
+        console.log('[DEBUG] Sending successful response');
+
         res.status(200).json(result);
 
     } catch (error) {
-        console.error('Classification error:', error);
+        console.error('[DEBUG] Classification error:', error.message);
+        console.error('[DEBUG] Error stack:', error.stack);
         res.status(500).json({
             error: error.message || 'Failed to classify book'
         });
