@@ -1,0 +1,9 @@
+{
+  "name": "synoptic-classification-system",
+  "version": "1.0.0",
+  "description": "A modified Dewey Decimal Classification for private libraries",
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
