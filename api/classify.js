@@ -457,18 +457,23 @@ When given a book title, author, and optional description, you must:
 
 1. **Theory vs. Regional**: If the book provides a theoretical LENS for interpreting other works → 900-908. If it's about a specific place/time → regional section (910-999).
 
-2. **Letter Suffixes**: Use letter suffixes for thematic/commentary material:
-   - No suffix = narrative history
-   - E = economic policy
-   - S = social policy
-   - F = foreign policy/security
-   - P = political commentary
-   - T = trade policy
-   - C = cultural/intellectual
-   - R = reference/textbook
-   - V = survey/spanning work
+2. **Letter Suffixes — Apply by Default**: If a book has a clear thematic lens, it MUST get a suffix. Only omit the suffix for pure narrative "what happened" history.
 
-3. **US Presidential Eras**: Match to the correct presidential period (973.922 = Kennedy, 973.926 = Reagan, etc.) and add letter suffix if it's commentary rather than narrative.
+   **DEFAULT: Add a suffix when the book is:**
+   - Economic analysis/policy of an era → E suffix (e.g., Tooze's *Wages of Destruction* → 943.086E)
+   - Social policy/debates → S suffix
+   - Foreign policy/national security → F suffix (e.g., Luttwak's *Grand Strategy of the Soviet Union* → 947.085F)
+   - Political commentary/analysis → P suffix
+   - Trade & industrial policy → T suffix
+   - Cultural & intellectual history → C suffix
+   - Reference/textbook → R suffix
+   - Survey/spanning work → V suffix
+
+   **ONLY omit suffix for:** Pure narrative history that tells "what happened" chronologically without a dominant analytical lens. Examples: Kershaw's *Hitler* biographies, Evans's *Third Reich* trilogy, Caro's *LBJ* books, Perlstein's *Nixonland*.
+
+   **Key test:** Does the book analyze through a specific lens (economic, social, foreign policy, etc.)? If yes → add the appropriate suffix. If it's a biographical or narrative chronicle → no suffix.
+
+3. **US Presidential Eras**: Match to the correct presidential period (973.922 = Kennedy, 973.926 = Reagan, etc.). Add the appropriate letter suffix for any book with a thematic focus—only omit for pure narrative.
 
 4. **Classify by Use**: Ignore publisher categorization. Ask: how would a serious reader USE this book?
 
