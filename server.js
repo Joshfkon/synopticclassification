@@ -58,7 +58,8 @@ This means:
 | 901.2 | Collapse & decline | Theoretical frameworks for civilizational failure and systemic decline | Tainter, Diamond's *Collapse*, Orlov |
 | 901.3 | Institutional analysis | How institutions shape historical outcomes; institutional sclerosis | Olson, North, Acemoglu, Scott's *Seeing Like a State* |
 | 901.4 | Political economy of power | Intersection of economics and state power; fiscal-military states; hegemonic stability | Kennedy's *Rise and Fall*, Smil's *Energy and Civilization*, Landes, Ferguson's *Cash Nexus*, Yergin |
-| 901.5 | Demographic models | Population dynamics as drivers of historical change | Malthus, Clark's *Farewell to Alms* |
+| 901.5 | Demographic models | Population dynamics as drivers of historical change | Malthus, Clark's *Farewell to Alms*, Morland's *Human Tide* |
+| 901.6 | Social stratification & mobility | How talent, status, and class are sorted and transmitted across generations | Clark's *Son Also Rises*, Wooldridge's *Aristocracy of Talent* |
 | 902 | *Reserved* | Available for future use | |
 | 903 | War Theory & Grand Strategy | Military theory, strategic thought, philosophy of war (not campaigns or operational history) | Clausewitz, Jomini, Sun Tzu, Luttwak, Boyd, Schelling, Freedman's *Strategy* |
 | 904 | Geopolitics & International Systems | Theories of international order, geopolitical frameworks, systemic analysis of state competition | Mackinder, Mahan, Mearsheimer, Zeihan, Brzezinski, Kaplan, Waltz |
@@ -382,7 +383,7 @@ Material migrates INTO this block from:
 ### From 355 (Military Science)
 - Military theory, strategic thought → 903
 - Military history of a specific place/time → appropriate 910–999 section
-- Technical/doctrinal manuals → remains 355 or discard
+- 355 is eliminated as a category; nothing remains (except literal field manuals)
 
 ---
 
