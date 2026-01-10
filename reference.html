@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Reference — Synoptic Classification System</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Open Graph / Social Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Classification Reference — Synoptic Classification System">
+    <meta property="og:description" content="Complete reference tables for the Synoptic Classification System. All schemas, letter suffixes, and regional applications.">
+    <meta property="og:image" content="https://synopticclassification.com/og-image.png">
+    <meta property="og:url" content="https://synopticclassification.com/reference">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Classification Reference — Synoptic Classification System">
+    <meta name="twitter:description" content="Complete reference tables for the Synoptic Classification System.">
+    <meta name="twitter:image" content="https://synopticclassification.com/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1612;
+            --parchment: #f7f3eb;
+            --parchment-dark: #e8e0d0;
+            --gold: #8b7355;
+            --gold-light: #c4a574;
+            --burgundy: #6b3a3a;
+            --sage: #4a5c4a;
+            --shadow: rgba(26, 22, 18, 0.08);
+            --shadow-deep: rgba(26, 22, 18, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--parchment);
+            color: var(--ink);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: var(--parchment);
+            border-bottom: 1px solid var(--shadow);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Table of Contents */
+        .toc {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 200px;
+            font-size: 0.85rem;
+            z-index: 50;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--gold);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .toc a:hover {
+            opacity: 1;
+        }
+
+        /* Main content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-header {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--shadow);
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--ink);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--gold);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--ink);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--shadow);
+        }
+
+        th {
+            background: var(--parchment-dark);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--gold);
+        }
+
+        tr:hover {
+            background: rgba(139, 115, 85, 0.05);
+        }
+
+        .number-col {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--sage);
+            white-space: nowrap;
+        }
+
+        .example-col {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Code/notation */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            background: var(--parchment-dark);
+            padding: 0.15em 0.4em;
+            border-radius: 3px;
+            color: var(--sage);
+        }
+
+        /* Principle blocks */
+        .principle {
+            background: linear-gradient(135deg, var(--parchment-dark) 0%, var(--parchment) 100%);
+            border-left: 3px solid var(--gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .principle h3 {
+            margin-top: 0;
+            color: var(--ink);
+        }
+
+        /* Note blocks */
+        .note {
+            background: rgba(139, 115, 85, 0.1);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .note em {
+            color: var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ink);
+            color: var(--parchment);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--gold-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .toc {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            main {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">SCS</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#classifier">Classify</a></li>
+            <li><a href="#principles">Principles</a></li>
+            <li><a href="#schema-900">Theory Schema</a></li>
+            <li><a href="#regional">Regional</a></li>
+        </ul>
+    </nav>
+
+    <aside class="toc">
+        <ul>
+            <li><a href="#principles">Principles</a></li>
+            <li><a href="#schema-900">900-908 Schema</a></li>
+            <li><a href="#schema-909">909-999 Schema</a></li>
+            <li><a href="#letter-suffixes">Letter Suffixes</a></li>
+            <li><a href="#united-states">United States</a></li>
+            <li><a href="#china">China</a></li>
+            <li><a href="#russia">Russia</a></li>
+            <li><a href="#contemporary">Contemporary World</a></li>
+            <li><a href="#evolutionary">Evolutionary Psych</a></li>
+            <li><a href="#migration">Migration Rules</a></li>
+            <li><a href="#edge-cases">Edge Cases</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <header class="page-header">
+            <h1>Classification Reference</h1>
+            <p>From Greek synoptikos, "seeing the whole together"</p>
+        </header>
+
+        <!-- Governing Principles -->
+        <section id="principles">
+            <h2>Governing Principles</h2>
+
+            <div class="principle">
+                <h3>Principle 1: History & Theory Integration</h3>
+                <p>The 900-908 block houses theoretical and comparative work that transcends specific places and times. This material provides the analytical lenses used to interpret historical events. Theory and history are not separate disciplines-they belong together.</p>
+                <p><strong>Material migrates INTO this block from:</strong></p>
+                <ul>
+                    <li>303 (social processes, social change)</li>
+                    <li>320 (political science, when theoretical)</li>
+                    <li>327 (international relations, when theoretical)</li>
+                    <li>330 (economics, when theoretical)</li>
+                    <li>355 (military science, when theoretical)</li>
+                </ul>
+            </div>
+
+            <div class="principle">
+                <h3>Principle 2: Regional Consolidation</h3>
+                <p>Everything about a specific place and time-political, military, diplomatic, economic-belongs in that place's regional section (910-999). Dewey's disciplinary silos retain only genuinely abstract, placeless material.</p>
+                <p><strong>This means:</strong></p>
+                <ul>
+                    <li>A book on Jacksonian democracy -> 973 (not 320)</li>
+                    <li>A book on Soviet military doctrine -> 947 (not 355)</li>
+                    <li>A book on British mercantilist policy -> 941 (not 330)</li>
+                    <li>Tocqueville's <em>Democracy in America</em> -> 973 (not 320)</li>
+                    <li>Clausewitz's <em>On War</em> -> 903 (theory, not tied to a campaign)</li>
+                    <li>A history of the Napoleonic Wars -> 940.27 (not 355)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 900-908 Schema -->
+        <section id="schema-900">
+            <h2>The 900-908 Schema: History & Theory</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="number-col">900</td>
+                            <td>Historiography & Philosophy of History</td>
+                            <td>How to think about history; metahistorical frameworks</td>
+                            <td class="example-col">Spengler, Toynbee, Collingwood, Carr's What Is History?</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901</td>
+                            <td>Structural Theories & Cliodynamics</td>
+                            <td>Models of historical change, cycles, collapse, institutional dynamics</td>
+                            <td class="example-col"></td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.0</td>
+                            <td>General structural theory</td>
+                            <td>Broad synthetic works on how societies/civilizations work</td>
+                            <td class="example-col">Diamond's Guns, Germs, and Steel</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.1</td>
+                            <td>Cliodynamics & cycles</td>
+                            <td>Quantitative models, cyclical theories of history</td>
+                            <td class="example-col">Turchin, Goldstone</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.2</td>
+                            <td>Collapse & decline</td>
+                            <td>Theoretical frameworks for civilizational failure</td>
+                            <td class="example-col">Tainter, Diamond's Collapse, Orlov</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.3</td>
+                            <td>Institutional analysis</td>
+                            <td>How institutions shape historical outcomes</td>
+                            <td class="example-col">Olson, North, Acemoglu, Scott's Seeing Like a State</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.4</td>
+                            <td>Political economy of power</td>
+                            <td>Economics and state power; fiscal-military states</td>
+                            <td class="example-col">Kennedy's Rise and Fall, Smil's Energy and Civilization</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">901.5</td>
+                            <td>Demographic models</td>
+                            <td>Population dynamics as drivers of historical change</td>
+                            <td class="example-col">Malthus, Clark's Farewell to Alms</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">902</td>
+                            <td><em>Reserved</em></td>
+                            <td>Available for future use</td>
+                            <td class="example-col"></td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">903</td>
+                            <td>War Theory & Grand Strategy</td>
+                            <td>Military theory, strategic thought, philosophy of war</td>
+                            <td class="example-col">Clausewitz, Sun Tzu, Luttwak, Boyd, Freedman</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">904</td>
+                            <td>Geopolitics & International Systems</td>
+                            <td>Theories of international order, geopolitical frameworks</td>
+                            <td class="example-col">Mackinder, Mahan, Mearsheimer, Zeihan, Brzezinski</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">905</td>
+                            <td><em>Reserved</em></td>
+                            <td>Available for future use</td>
+                            <td class="example-col"></td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">906</td>
+                            <td>State Formation & Institutions</td>
+                            <td>How states form, regime theory, institutional development</td>
+                            <td class="example-col">Hobbes, Locke, Fukuyama, Huntington, Tilly</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">907</td>
+                            <td>Empire & Hegemony</td>
+                            <td>Theories of imperial expansion, hegemonic competition</td>
+                            <td class="example-col">Schumpeter, Ferguson, Sowell, Darwin</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">908</td>
+                            <td>Comparative & Bilateral Systems</td>
+                            <td>Works comparing multiple civilizations/states</td>
+                            <td class="example-col">Gaddis's The Cold War, Westad, Nye</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 909-999 Schema -->
+        <section id="schema-909">
+            <h2>The 909-999 Schema: Regional & Chronological</h2>
+
+            <p>Standard Dewey regional assignments are retained, with the understanding that ALL aspects of a region's history (political, military, diplomatic, economic) consolidate here.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Range</th>
+                            <th>Region</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">909</td><td>World history (surveys, global)</td></tr>
+                        <tr><td class="number-col">910-919</td><td>Geography & travel</td></tr>
+                        <tr><td class="number-col">920-929</td><td>Biography</td></tr>
+                        <tr><td class="number-col">930-939</td><td>Ancient world</td></tr>
+                        <tr><td class="number-col">940-949</td><td>Europe</td></tr>
+                        <tr><td class="number-col">950-959</td><td>Asia</td></tr>
+                        <tr><td class="number-col">960-969</td><td>Africa</td></tr>
+                        <tr><td class="number-col">970-979</td><td>North America</td></tr>
+                        <tr><td class="number-col">980-989</td><td>South America</td></tr>
+                        <tr><td class="number-col">990-999</td><td>Oceania & other</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Chronological Subdivisions</h3>
+            <p>Where useful, apply chronological subdivisions after the regional number:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Decimal</th>
+                            <th>Era</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">.01-.09</td><td>Historiography, theory, surveys of this region</td></tr>
+                        <tr><td class="number-col">.1</td><td>Ancient / early</td></tr>
+                        <tr><td class="number-col">.2</td><td>Medieval</td></tr>
+                        <tr><td class="number-col">.3</td><td>Early modern (c. 1500-1789)</td></tr>
+                        <tr><td class="number-col">.4</td><td>Long 19th century (1789-1914)</td></tr>
+                        <tr><td class="number-col">.5</td><td>Early 20th century (1914-1945)</td></tr>
+                        <tr><td class="number-col">.6</td><td>Cold War era (1945-1991)</td></tr>
+                        <tr><td class="number-col">.7</td><td>Post-Cold War (1991-present)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <em>Note:</em> These subdivisions are flexible. For regions where standard Dewey already has sensible chronological breakdowns (e.g., 973.x for US history), retain those instead.
+            </div>
+        </section>
+
+        <!-- Letter Suffixes -->
+        <section id="letter-suffixes">
+            <h2>Letter Suffixes for Thematic Content</h2>
+
+            <p>Standard Dewey uses numeric subdivisions for chronological/presidential periods (e.g., 973.922 for Kennedy). To avoid collision, use <strong>letter suffixes</strong> for thematic/commentary material that isn't narrative history.</p>
+
+            <h3>Three-Tier Structure for Regional Histories</h3>
+            <ol>
+                <li><code>XXXR</code> - Reference, textbooks, timeless institutional analysis (letter suffix R)</li>
+                <li><code>XXX.YY</code> - Narrative history of that era (standard Dewey, no suffix)</li>
+                <li><code>XXX.YY[letter]</code> - Thematic subdivisions within that era (letter suffix)</li>
+            </ol>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Suffix</th>
+                            <th>Content Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">R</td><td>Reference, textbooks, institutional analysis</td></tr>
+                        <tr><td class="number-col">V</td><td>Surveys, spanning works (surVey)</td></tr>
+                        <tr><td class="number-col">H</td><td>Historiography</td></tr>
+                        <tr><td class="number-col">P</td><td>Political commentary/analysis</td></tr>
+                        <tr><td class="number-col">E</td><td>Economic policy & debates</td></tr>
+                        <tr><td class="number-col">T</td><td>Trade & industrial policy</td></tr>
+                        <tr><td class="number-col">S</td><td>Social policy & domestic debates</td></tr>
+                        <tr><td class="number-col">F</td><td>Foreign policy & national security</td></tr>
+                        <tr><td class="number-col">C</td><td>Cultural & intellectual history</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <strong>No suffix</strong> = narrative history (what happened)<br>
+                <strong>Letter suffix</strong> = thematic material (analysis, commentary, policy debates)
+            </div>
+        </section>
+
+        <!-- United States -->
+        <section id="united-states">
+            <h2>United States (973)</h2>
+
+            <h3>Pre-chronological (timeless material)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Content</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="number-col">973R</td>
+                            <td>Reference, textbooks, institutional analysis</td>
+                            <td class="example-col">O'Connor/Sabato's American Government, Bryce's American Commonwealth</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">973V</td>
+                            <td>Surveys, spanning works</td>
+                            <td class="example-col">Gordon's Rise and Fall of American Growth</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">973H</td>
+                            <td>Historiography</td>
+                            <td class="example-col"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Chronological Subdivisions</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Era</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">973.1-.2</td><td>Colonial period</td></tr>
+                        <tr><td class="number-col">973.3</td><td>Revolution & Founding (1775-1789)</td></tr>
+                        <tr><td class="number-col">973.4</td><td>Early Republic (1789-1809)</td></tr>
+                        <tr><td class="number-col">973.5</td><td>1809-1845</td></tr>
+                        <tr><td class="number-col">973.6</td><td>1845-1861</td></tr>
+                        <tr><td class="number-col">973.7</td><td>Civil War (1861-1865)</td></tr>
+                        <tr><td class="number-col">973.8</td><td>Reconstruction & Gilded Age (1865-1901)</td></tr>
+                        <tr><td class="number-col">973.91</td><td>Early 20th century (1901-1953)</td></tr>
+                        <tr><td class="number-col">973.921</td><td>Truman/Eisenhower</td></tr>
+                        <tr><td class="number-col">973.922</td><td>Kennedy</td></tr>
+                        <tr><td class="number-col">973.923</td><td>Johnson</td></tr>
+                        <tr><td class="number-col">973.924</td><td>Nixon/Ford</td></tr>
+                        <tr><td class="number-col">973.925</td><td>Ford</td></tr>
+                        <tr><td class="number-col">973.926</td><td>Reagan</td></tr>
+                        <tr><td class="number-col">973.927</td><td>Bush I</td></tr>
+                        <tr><td class="number-col">973.928</td><td>Clinton</td></tr>
+                        <tr><td class="number-col">973.931</td><td>Bush II</td></tr>
+                        <tr><td class="number-col">973.932</td><td>Obama</td></tr>
+                        <tr><td class="number-col">973.933</td><td>Trump</td></tr>
+                        <tr><td class="number-col">973.934</td><td>Biden</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Example Classifications with Letter Suffixes</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Content</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">973.922</td><td>Kennedy era, narrative</td><td class="example-col">Schlesinger's A Thousand Days</td></tr>
+                        <tr><td class="number-col">973.923</td><td>LBJ era, narrative</td><td class="example-col">Caro's Master of the Senate</td></tr>
+                        <tr><td class="number-col">973.924</td><td>Nixon era, narrative</td><td class="example-col">Perlstein's Nixonland</td></tr>
+                        <tr><td class="number-col">973.924E</td><td>Nixon era, economic policy</td><td class="example-col">Garten's Three Days at Camp David</td></tr>
+                        <tr><td class="number-col">973.926</td><td>Reagan era, narrative</td><td class="example-col">Perlstein's Reaganland</td></tr>
+                        <tr><td class="number-col">973.926S</td><td>Reagan era, social policy</td><td class="example-col">Sowell's Civil Rights: Rhetoric or Reality</td></tr>
+                        <tr><td class="number-col">973.926C</td><td>Reagan era, cultural</td><td class="example-col">Doherty's Radicals for Capitalism</td></tr>
+                        <tr><td class="number-col">973.932E</td><td>Obama era, economic policy</td><td class="example-col">Sorkin's Too Big to Fail</td></tr>
+                        <tr><td class="number-col">973.933T</td><td>Trump era, trade policy</td><td class="example-col">Lighthizer's No Trade Is Free</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- China -->
+        <section id="china">
+            <h2>China (951)</h2>
+
+            <h3>Pre-chronological</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Content</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">951R</td><td>Reference, textbooks</td></tr>
+                        <tr><td class="number-col">951V</td><td>Surveys, spanning works</td></tr>
+                        <tr><td class="number-col">951H</td><td>Historiography</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Chronological Subdivisions</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Era</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">951.01-.03</td><td>Ancient & Imperial (to 1644)</td></tr>
+                        <tr><td class="number-col">951.04</td><td>Qing Dynasty (1644-1912)</td></tr>
+                        <tr><td class="number-col">951.05</td><td>Republic & Warlord era (1912-1949)</td></tr>
+                        <tr><td class="number-col">951.06</td><td>Mao era (1949-1976)</td></tr>
+                        <tr><td class="number-col">951.07</td><td>Reform era (1976-2012)</td></tr>
+                        <tr><td class="number-col">951.08</td><td>Xi era (2012-present)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Example Classifications</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Content</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">951.07E</td><td>Reform era, economic policy</td><td class="example-col">Walter's Red Capitalism</td></tr>
+                        <tr><td class="number-col">951.08P</td><td>Xi era, political</td><td class="example-col">McGregor's Xi Jinping: The Backlash</td></tr>
+                        <tr><td class="number-col">951.08E</td><td>Xi era, economic policy</td><td class="example-col">Orlik's China: The Bubble That Never Pops</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Russia -->
+        <section id="russia">
+            <h2>Russia/Soviet Union (947)</h2>
+
+            <h3>Pre-chronological</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Content</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">947R</td><td>Reference, textbooks</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">947V</td><td>Surveys, spanning works</td><td class="example-col">Courtois's Black Book of Communism</td></tr>
+                        <tr><td class="number-col">947H</td><td>Historiography</td><td class="example-col"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Chronological Subdivisions</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Era</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">947.01-.03</td><td>Medieval Russia</td></tr>
+                        <tr><td class="number-col">947.04</td><td>Early modern / Romanov (to 1801)</td></tr>
+                        <tr><td class="number-col">947.05-.07</td><td>19th century Imperial</td></tr>
+                        <tr><td class="number-col">947.08</td><td>Late Imperial & Revolution (1894-1922)</td></tr>
+                        <tr><td class="number-col">947.084</td><td>Stalin era (1924-1953)</td></tr>
+                        <tr><td class="number-col">947.085</td><td>Post-Stalin Soviet (1953-1991)</td></tr>
+                        <tr><td class="number-col">947.086</td><td>Post-Soviet Russia (1991-present)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Example Classifications</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Content</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">947.085</td><td>Post-Stalin Soviet, narrative</td><td class="example-col">Kotkin</td></tr>
+                        <tr><td class="number-col">947.085E</td><td>Post-Stalin Soviet, economic</td><td class="example-col">Shelton's Coming Soviet Crash</td></tr>
+                        <tr><td class="number-col">947.085F</td><td>Post-Stalin Soviet, foreign/security</td><td class="example-col">Luttwak's Grand Strategy of the Soviet Union</td></tr>
+                        <tr><td class="number-col">947.086</td><td>Post-Soviet, narrative</td><td class="example-col">Kotkin's Armageddon Averted</td></tr>
+                        <tr><td class="number-col">947.086P</td><td>Post-Soviet, political</td><td class="example-col">Sakwa's Russian Politics and Society</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Japan -->
+        <section id="japan">
+            <h2>Japan (952)</h2>
+
+            <h3>Chronological Subdivisions</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Era</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">952.01-.02</td><td>Ancient & Medieval</td></tr>
+                        <tr><td class="number-col">952.03</td><td>Tokugawa (1603-1868)</td></tr>
+                        <tr><td class="number-col">952.04</td><td>Meiji to WWII (1868-1945)</td></tr>
+                        <tr><td class="number-col">952.05</td><td>Postwar (1945-present)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Example Classifications</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Number</th><th>Content</th><th>Examples</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">952.05E</td><td>Postwar, economic policy</td><td class="example-col">Tabb's Postwar Japanese System, Wood's Bubble Economy</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contemporary World History -->
+        <section id="contemporary">
+            <h2>Contemporary World History (909.8x)</h2>
+
+            <p>Contemporary global phenomena that transcend regional boundaries belong here. This is where the post-WWII world order, demographic transition, globalization, and related developments live.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Category</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">909.80</td><td>Contemporary world history - general surveys</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">909.81</td><td>Post-WWII order (1945-1971) - Bretton Woods, early Cold War</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">909.82</td><td>Late Cold War (1971-1991) - Stagflation, neoliberal turn</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">909.83</td><td>Post-Cold War (1991-2008) - Unipolar moment, globalization</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">909.84</td><td>Crisis era (2008-present) - Financial crisis, populism</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">909.85</td><td>Demographic decline & aging</td><td class="example-col">Goodhart's Great Demographic Reversal, Morland's Human Tide</td></tr>
+                        <tr><td class="number-col">909.86</td><td>Globalization & deglobalization</td><td class="example-col">Zeihan's End of the World Is Just the Beginning</td></tr>
+                        <tr><td class="number-col">909.87</td><td>Energy & resource transitions</td><td class="example-col">Smil's How the World Really Works</td></tr>
+                        <tr><td class="number-col">909.89</td><td>Futurism & projections</td><td class="example-col">Friedman's Next 100 Years</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Evolutionary Psychology -->
+        <section id="evolutionary">
+            <h2>Evolutionary Psychology & Human Biology (576.8x)</h2>
+
+            <p>Evolutionary approaches to human behavior belong with biology (576, evolution), not scattered across sociology (301), psychology (150), or "social processes" (303). This block consolidates material on human nature, cognition, and behavior as products of evolution.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Category</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">576.80</td><td>Human evolution, general</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">576.81</td><td>Intelligence & psychometrics</td><td class="example-col"></td></tr>
+                        <tr><td class="number-col">576.82</td><td>Human biodiversity</td><td class="example-col">Murray's Human Diversity, Clark's Son Also Rises</td></tr>
+                        <tr><td class="number-col">576.83</td><td>Evolutionary psychology, general</td><td class="example-col">Wright's Moral Animal</td></tr>
+                        <tr><td class="number-col">576.84</td><td>Sociality, cooperation, kinship</td><td class="example-col">Ridley's Origins of Virtue</td></tr>
+                        <tr><td class="number-col">576.85</td><td>Sex, mating, pair-bonding</td><td class="example-col">Fisher's Why We Love</td></tr>
+                        <tr><td class="number-col">576.86</td><td>Aggression, dominance, politics</td><td class="example-col">Wade's Origin of Politics</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Migration Rules -->
+        <section id="migration">
+            <h2>Migration Rules</h2>
+
+            <p>When reclassifying from standard Dewey to SCS, material moves as follows:</p>
+
+            <h3>From 153 (Mental Processes & Intelligence)</h3>
+            <ul>
+                <li>Intelligence, IQ, psychometrics -> <code>576.81</code></li>
+                <li>Cognitive ability, g-factor -> <code>576.81</code></li>
+                <li>Non-evolutionary cognitive science -> remains 153</li>
+            </ul>
+
+            <h3>From 303 (Social Processes)</h3>
+            <ul>
+                <li>Civilizational dynamics, social change theory -> <code>901.0</code> or <code>901.1</code></li>
+                <li>Collapse/decline theory -> <code>901.2</code></li>
+                <li>Institutional analysis -> <code>901.3</code></li>
+                <li>Specific to a place/time -> appropriate 910-999 section</li>
+            </ul>
+
+            <h3>From 304.5 (Human Ecology / Sociobiology)</h3>
+            <ul>
+                <li>Evolutionary psychology -> <code>576.83</code></li>
+                <li>Sociobiology, kin selection -> <code>576.84</code></li>
+                <li>Human biodiversity -> <code>576.82</code></li>
+                <li>Demographic material -> <code>909.85</code></li>
+            </ul>
+
+            <h3>From 320 (Political Science)</h3>
+            <ul>
+                <li>Political philosophy as analytical lens -> <code>900</code> or <code>906</code></li>
+                <li>Regime theory, state formation -> <code>906</code></li>
+                <li>Ideology as historical force -> <code>907</code></li>
+                <li>Political history of a specific place -> appropriate 910-999 section</li>
+                <li>Normative political philosophy (Rawls, etc.) -> remains 320</li>
+            </ul>
+
+            <h3>From 327 (International Relations)</h3>
+            <ul>
+                <li>IR theory, systemic analysis -> <code>904</code></li>
+                <li>Bilateral relationships -> <code>908</code> if comparative; otherwise to dominant region</li>
+                <li>Diplomatic history of a specific place/time -> appropriate 910-999 section</li>
+            </ul>
+
+            <h3>From 330 (Economics)</h3>
+            <ul>
+                <li>Political economy of power, fiscal-military states -> <code>901.4</code></li>
+                <li>Economic models of growth/decline -> <code>901.3</code> or <code>901.4</code></li>
+                <li>Economic history of a specific place -> appropriate 910-999 section</li>
+                <li>Pure economics -> remains 330</li>
+            </ul>
+
+            <h3>From 355 (Military Science)</h3>
+            <ul>
+                <li>Military theory, strategic thought -> <code>903</code></li>
+                <li>Military history of a specific place/time -> appropriate 910-999 section</li>
+                <li>Technical/doctrinal manuals -> remains 355</li>
+            </ul>
+        </section>
+
+        <!-- Edge Cases -->
+        <section id="edge-cases">
+            <h2>Edge Cases & Decision Rules</h2>
+
+            <h3>Spanning Works</h3>
+            <p>Books covering a region across all eras (e.g., a full history of Russia) use the <code>.01-.09</code> subdivision for that region, or simply the base number without chronological subdivision.</p>
+            <p><em>Example:</em> A complete history of Russia -> <code>947.01</code> or just <code>947</code></p>
+
+            <h3>Bilateral/Multilateral Works</h3>
+            <p>If a book is genuinely about the <em>relationship</em> between powers rather than either power individually, it goes to <code>908</code> (Comparative & Bilateral Systems).</p>
+            <p><em>Example:</em> Gaddis's <em>The Cold War</em> -> <code>908.6</code> (bilateral, Cold War era)</p>
+            <p>If the book has a clear "home" perspective, it goes to that region.</p>
+            <p><em>Example:</em> Zubok's <em>A Failed Empire</em> (Soviet perspective on Cold War) -> <code>947.6</code></p>
+
+            <h3>Theory vs. Application</h3>
+            <p>When in doubt: if you'd use the book to <em>interpret</em> other books, it's theory (900-908). If it's a case study you'd <em>interpret using</em> theory, it's regional (910-999).</p>
+
+            <h3>Author's Intent vs. Your Use</h3>
+            <p>Classify by how <em>you</em> use the book, not by the author's disciplinary affiliation or the publisher's categorization.</p>
+        </section>
+
+        <!-- Notation Format -->
+        <section id="notation">
+            <h2>Notation Format</h2>
+
+            <p>Standard format: <code>[Class].[Subdivision][Letter] [Cutter]</code></p>
+            <p>The letter suffix is optional-omit for narrative history, include for thematic material.</p>
+
+            <h3>Examples</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Notation</th><th>Book</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">576.83 WRI</td><td>Wright, <em>Moral Animal</em></td></tr>
+                        <tr><td class="number-col">901.2 TAI</td><td>Tainter, <em>Collapse of Complex Societies</em></td></tr>
+                        <tr><td class="number-col">903 CLA</td><td>Clausewitz, <em>On War</em></td></tr>
+                        <tr><td class="number-col">904 ZEI</td><td>Zeihan, <em>Accidental Superpower</em></td></tr>
+                        <tr><td class="number-col">937 LUT</td><td>Luttwak, <em>Grand Strategy of the Roman Empire</em></td></tr>
+                        <tr><td class="number-col">947.085F LUT</td><td>Luttwak, <em>Grand Strategy of the Soviet Union</em></td></tr>
+                        <tr><td class="number-col">973R BRY</td><td>Bryce, <em>American Commonwealth</em></td></tr>
+                        <tr><td class="number-col">973.5 TOC</td><td>Tocqueville, <em>Democracy in America</em></td></tr>
+                        <tr><td class="number-col">973.926S SOW</td><td>Sowell, <em>Civil Rights: Rhetoric or Reality</em></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Synoptic Classification System is open and free to use.<br>
+        <a href="/">Back to Home</a> | <a href="https://github.com/synoptic-classification" target="_blank">Documentation on GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        // Ensure page starts at the top
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
+</body>
+</html>

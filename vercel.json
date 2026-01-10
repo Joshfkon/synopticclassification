@@ -48,6 +48,10 @@
       "dest": "/og-image.png"
     },
     {
+      "src": "/reference",
+      "dest": "/reference.html"
+    },
+    {
       "src": "/((?!api/).*)",
       "dest": "/index.html"
     }
