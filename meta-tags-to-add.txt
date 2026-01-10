@@ -1,0 +1,19 @@
+<!-- Add these tags inside the <head> section of index.html -->
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph / iMessage / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.synopticclassification.com/">
+<meta property="og:title" content="Synoptic Classification System">
+<meta property="og:description" content="A modified Dewey system for private libraries. Designed for browsing, not retrieval. For thinkers, not librarians.">
+<meta property="og:image" content="https://www.synopticclassification.com/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Synoptic Classification System">
+<meta name="twitter:description" content="A modified Dewey system for private libraries. Designed for browsing, not retrieval.">
+<meta name="twitter:image" content="https://www.synopticclassification.com/og-image.png">
