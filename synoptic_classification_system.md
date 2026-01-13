@@ -157,7 +157,8 @@ Examples:
 | Number | Content | Examples |
 |--------|---------|----------|
 | 973R | Reference, textbooks, institutional analysis | O'Connor/Sabato's *American Government*, Bryce's *American Commonwealth*, Morley's *Freedom and Federalism* |
-| 973V | Surveys, spanning works (neutral) | Cowan's *Social History of American Technology* |
+| 973V | Surveys, spanning works (neutral) | |
+| 973VS | Spanning + social/cultural analysis | Cowan's *Social History of American Technology* |
 | 973VE | Spanning + economic analysis | Gordon's *Rise and Fall of American Growth* |
 | 973H | Historiography | |
 
@@ -273,8 +274,61 @@ Examples:
 | Number | Content | Examples |
 |--------|---------|----------|
 | 940R | Reference, textbooks | |
-| 940V | Surveys, spanning works | |
+| 940V | Surveys, spanning works (neutral) | |
+| 940VC | Spanning + cultural/intellectual | Holland's *Dominion* |
+| 940VE | Spanning + economic | |
 | 940H | Historiography | |
+
+**Standard Dewey 940.x chronological subdivisions:**
+
+| Number | Era |
+|--------|-----|
+| 940.1 | Medieval Europe (476–1453) |
+| 940.2 | Early modern Europe (1453–1789) |
+| 940.21 | Renaissance (1453–1517) |
+| 940.22 | Reformation (1517–1648) |
+| 940.23 | Thirty Years' War era |
+| 940.24 | 1648–1700 |
+| 940.25 | 18th century (1700–1789) |
+| 940.27 | Napoleonic era (1789–1815) |
+| 940.28 | 1815–1848 |
+| 940.3 | World War I (1914–1918) |
+| 940.4 | WWI military operations |
+| 940.5 | World War II (1939–1945) |
+| 940.53 | WWII social/economic aspects |
+| 940.54 | WWII military operations |
+
+**Country-specific subdivisions:**
+
+| Number | Country |
+|--------|---------|
+| 941 | British Isles |
+| 941.08 | 20th century Britain |
+| 942 | England |
+| 943 | Germany |
+| 943.08 | 20th century Germany |
+| 943.085 | Weimar (1918–1933) |
+| 943.086 | Nazi Germany (1933–1945) |
+| 943.087 | Postwar Germany (1945–1990) |
+| 943.088 | Reunified Germany (1990–present) |
+| 944 | France |
+| 944.04 | French Revolution |
+| 944.05 | Napoleonic France |
+| 944.08 | 20th century France |
+| 945 | Italy |
+| 946 | Spain |
+| 948 | Scandinavia |
+| 949 | Other European countries |
+| 949.5 | Greece / Byzantine Empire |
+| 949.7 | Yugoslavia / Balkans |
+
+**With letter suffixes:**
+
+| Number | Content | Examples |
+|--------|---------|----------|
+| 940.53E | WWII economic | Tooze's *Wages of Destruction* → 943.086E |
+| 943.086E | Nazi Germany, economic | Tooze's *Wages of Destruction* |
+| 943.086F | Nazi Germany, foreign/military | |
 
 ### Japan (952) Application
 
@@ -513,6 +567,48 @@ Examples:
 
 ---
 
+## Precision in Classification Numbers
+
+### Use the Most Specific Number Available
+
+When classifying, use the most precise Dewey number that applies. Don't stop at broad categories when more specific subdivisions exist.
+
+**Examples of precision:**
+
+| Too Broad | Better | Best |
+|-----------|--------|------|
+| 940 | 940.5 | 940.53 (WWII social aspects) |
+| 943 | 943.08 | 943.086 (Nazi Germany) |
+| 973 | 973.9 | 973.926 (Reagan era) |
+| 947 | 947.08 | 947.085 (Post-Stalin Soviet) |
+
+**Standard Dewey precision patterns:**
+
+For US history (973.x):
+- 973.9 = 20th century
+- 973.91 = 1901–1953
+- 973.92 = 1953–2001
+- 973.921 = Eisenhower
+- 973.922 = Kennedy
+- ... etc.
+
+For Germany (943.x):
+- 943.08 = 20th century
+- 943.085 = Weimar
+- 943.086 = Nazi era
+- 943.087 = Postwar division
+- 943.088 = Reunification
+
+For Russia (947.x):
+- 947.08 = 20th century
+- 947.084 = Stalin era
+- 947.085 = Post-Stalin Soviet
+- 947.086 = Post-Soviet
+
+**Always check if a more specific number exists before settling on a broad category.**
+
+---
+
 ## Version History
 
 - v1.0 — Initial draft, January 2026
@@ -522,6 +618,7 @@ Examples:
 - v1.4 — Added thematic subdivisions within chronological periods (.XX0–.XX6) to separate policy debates from general history; applied to US (973), China (951), and Russia (947)
 - v1.5 — Added three-tier structure: XXX.00x for reference/textbooks/spanning works (before chronological flow), XXX.YY0 for narrative history, XXX.YY1–6 for thematic subdivisions; applied to all regional sections
 - v1.6 — Replaced numeric thematic subdivisions with letter suffixes (R, V, H, P, E, T, S, F, C) to avoid collision with existing Dewey presidential/chronological numbers
+- v1.7 — Added compound suffixes (VS, VE, VC, etc.); expanded Europe (940) subdivisions; added precision guidance for Dewey numbers; added 901.6 (social stratification); collapsed 355 into 903
 
 ---
 
@@ -533,4 +630,3 @@ Examples:
 - 902 and 905 are now available—consider future use
 - Consider whether 906 (State Formation) should also fold into 901.x
 - Apply thematic subdivisions to other regions as collection grows (Europe 940, Japan 952, etc.)
-
