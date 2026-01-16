@@ -607,8 +607,32 @@
 
             <div class="note">
                 <strong>No suffix</strong> = narrative history (what happened)<br>
-                <strong>Letter suffix</strong> = thematic material (analysis, commentary, policy debates)
+                <strong>Letter suffix</strong> = thematic material (analysis, commentary, policy debates)<br>
+                <strong>V suffix</strong> = extends beyond the indicated era
             </div>
+
+            <h3>Compound Suffixes</h3>
+            <p>When a book is both a spanning work AND has a thematic focus, use compound suffixes with V first:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Suffix</th>
+                            <th>Content Type</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number-col">VS</td><td>Spanning + social commentary</td><td class="example-col">Wilkerson's <em>Warmth of Other Suns</em></td></tr>
+                        <tr><td class="number-col">VE</td><td>Spanning + economic analysis</td><td class="example-col">Gordon's <em>Rise and Fall of American Growth</em></td></tr>
+                        <tr><td class="number-col">VF</td><td>Spanning + foreign policy</td><td class="example-col">Isaacson's <em>The Wise Men</em></td></tr>
+                        <tr><td class="number-col">VP</td><td>Spanning + political commentary</td><td class="example-col"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>The V indicates "this work extends beyond the indicated era" while the second letter indicates the thematic lens. Plain V without a second letter is for neutral spanning works with no dominant thematic lens.</p>
         </section>
 
         <!-- United States -->
@@ -633,8 +657,18 @@
                         </tr>
                         <tr>
                             <td class="number-col">973V</td>
-                            <td>Surveys, spanning works</td>
+                            <td>True all-eras surveys (no center of gravity)</td>
+                            <td class="example-col">Comprehensive US history textbooks</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">973.91VE</td>
+                            <td>Spanning economic work, anchored to early 20th c.</td>
                             <td class="example-col">Gordon's Rise and Fall of American Growth</td>
+                        </tr>
+                        <tr>
+                            <td class="number-col">973.91VS</td>
+                            <td>Spanning social work, anchored to Great Migration</td>
+                            <td class="example-col">Wilkerson's Warmth of Other Suns</td>
                         </tr>
                         <tr>
                             <td class="number-col">973H</td>
@@ -963,8 +997,38 @@
             <h2>Edge Cases & Decision Rules</h2>
 
             <h3>Spanning Works</h3>
-            <p>Books covering a region across all eras (e.g., a full history of Russia) use the <code>.01-.09</code> subdivision for that region, or simply the base number without chronological subdivision.</p>
-            <p><em>Example:</em> A complete history of Russia -> <code>947.01</code> or just <code>947</code></p>
+            <p>Books covering multiple eras are <strong>anchored to their center of gravity</strong>—the era that dominates the book's focus or argument—with a V suffix indicating extension beyond that period. This keeps spanning works shelved near chronologically related material.</p>
+
+            <h4>Determining Center of Gravity</h4>
+            <ul>
+                <li>Where does the book spend most of its pages?</li>
+                <li>What era is central to the book's argument or thesis?</li>
+                <li>Where would a reader most expect to find it shelved?</li>
+            </ul>
+
+            <h4>Examples of Anchored Spanning Works</h4>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Book</th><th>Classification</th><th>Rationale</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="example-col">Gordon's <em>Rise and Fall of American Growth</em></td><td class="number-col">973.91VE GOR</td><td>Centered on industrial-era transformation, extends to present</td></tr>
+                        <tr><td class="example-col">Wilkerson's <em>Warmth of Other Suns</em></td><td class="number-col">973.91VS WIL</td><td>Centered on Great Migration, extends into late 20th century</td></tr>
+                        <tr><td class="example-col">Isaacson's <em>The Wise Men</em></td><td class="number-col">973.918VF ISA</td><td>Centered on Truman-era policy formation, extends through Cold War</td></tr>
+                        <tr><td class="example-col">Weiner's <em>Legacy of Ashes</em></td><td class="number-col">973.921VF WEI</td><td>Centered on early CIA/Cold War, extends to present</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4>True All-Eras Surveys</h4>
+            <p>Reserve base-number V (e.g., <code>973V</code>) only for:</p>
+            <ul>
+                <li>True survey works covering all eras without a dominant center</li>
+                <li>Textbook-style comprehensive histories</li>
+                <li>Reference works that resist chronological anchoring</li>
+            </ul>
+            <p><em>Example:</em> A complete history of Russia -> <code>947V</code> or <code>947.01</code></p>
 
             <h3>Bilateral/Multilateral Works</h3>
             <p>If a book is genuinely about the <em>relationship</em> between powers rather than either power individually, it goes to <code>908</code> (Comparative & Bilateral Systems).</p>
